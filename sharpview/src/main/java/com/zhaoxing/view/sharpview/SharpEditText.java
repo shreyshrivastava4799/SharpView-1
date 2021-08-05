@@ -7,7 +7,6 @@ import ohos.app.Context;
 /**
  * Created by 曾宪梓 on 2017/12/28.
  */
-
 public class SharpEditText extends TextField implements SharpView {
 
     public SharpEditText(Context context) {

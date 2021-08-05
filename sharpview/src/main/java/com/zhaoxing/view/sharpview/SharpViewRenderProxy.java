@@ -35,7 +35,6 @@ public class SharpViewRenderProxy {
     public static final String RELATIVE_POSITION = "relativePosition";
     public static final String SHARP_SIZE = "sharpSize";
     private Component mComponent;
-
     private float mRadius;
     private RgbColor mBackgroundColor;
     private float mRelativePosition;
@@ -45,7 +44,6 @@ public class SharpViewRenderProxy {
     private RgbColor[] mBgColors;
     private float[] mCornerRadii = new float[8];
     private SharpView.ArrowDirection mArrowDirection = SharpView.ArrowDirection.LEFT;
-
     public SharpDrawable mSharpDrawable;
 
     SharpViewRenderProxy(Component component, AttrSet attrs) {
@@ -66,7 +64,7 @@ public class SharpViewRenderProxy {
         }
     }
 
-    public SharpDrawable getmSharpDrawable() {
+    public SharpDrawable getSharpDrawable() {
         return mSharpDrawable;
     }
 
@@ -111,8 +109,8 @@ public class SharpViewRenderProxy {
         refreshView();
     }
 
-    public void setmSharpDrawable(SharpDrawable mSharpDrawable) {
-        this.mSharpDrawable = mSharpDrawable;
+    public void setSharpDrawable(SharpDrawable SharpDrawable) {
+        mSharpDrawable = SharpDrawable;
     }
 
     /**
@@ -279,7 +277,7 @@ public class SharpViewRenderProxy {
 
     private void refreshView() {
         SharpDrawable bd = new SharpDrawable(ShapeElement.Orientation.LEFT_TO_RIGHT, mComponent);
-        setmSharpDrawable(bd);
+        setSharpDrawable(bd);
         if (mBgColors != null) {
             bd.setBgColor(mBgColors);
         } else {
@@ -290,7 +288,7 @@ public class SharpViewRenderProxy {
         bd.setBorder(mBorder);
         bd.setBorderColor(mBorderColor);
         bd.setRelativePosition(mRelativePosition);
-        bd.setSharpViewCornerRadius(mRadius);
+        bd.setCornerRadius(mRadius);
         if (mRadius == 0) {
             bd.setCornerRadii(mCornerRadii);
         }

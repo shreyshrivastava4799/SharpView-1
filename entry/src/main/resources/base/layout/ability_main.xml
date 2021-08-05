@@ -53,6 +53,8 @@
         ohos:margin="50vp"
         app:radius="10vp"
         app:arrowDirection="right"
+        app:border="10vp"
+        app:borderColor="#FFFF0000"
         app:backgroundColor="#FF000000"
         app:relativePosition="0.9"
         app:sharpSize="15vp">

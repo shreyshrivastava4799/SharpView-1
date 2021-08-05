@@ -23,10 +23,8 @@ import ohos.agp.components.AttrSet;
 import ohos.agp.components.Image;
 import ohos.agp.components.element.ShapeElement;
 import ohos.app.Context;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.manipulation.Ordering;
 
 import java.util.Optional;
 
@@ -72,53 +70,53 @@ public class SharpDrawableTest {
     public void setBgColor() {
         RgbColor[] rgbColors = new RgbColor[]{RgbPalette.BLUE, RgbPalette.GREEN};
         sharpDrawable.setBgColor(rgbColors);
-        assertArrayEquals(rgbColors, sharpDrawable.getmBgColor());
+        assertArrayEquals(rgbColors, sharpDrawable.getBgColor());
     }
 
     @Test
     public void setCornerRadius() {
         float radius = 10;
-        sharpDrawable.setSharpViewCornerRadius(radius);
-        assertTrue(abs(radius-sharpDrawable.getmCornerRadius()) < 0.5);
+        sharpDrawable.setCornerRadius(radius);
+        assertTrue(abs(radius-sharpDrawable.getCornerRadius()) < 0.5);
     }
 
     @Test
     public void setCornerRadii() {
         float[] radii = {1, 1, 1, 1, 1, 1, 1, 1};
         sharpDrawable.setCornerRadii(radii);
-        assertArrayEquals(radii, sharpDrawable.getmCornerRadii(), 1);
+        assertArrayEquals(radii, sharpDrawable.getCornerRadii(), 1);
     }
 
     @Test
     public void setArrowDirection() {
         sharpDrawable.setArrowDirection(SharpView.ArrowDirection.LEFT);
-        assertSame(SharpView.ArrowDirection.LEFT, sharpDrawable.getmArrowDirection());
+        assertSame(SharpView.ArrowDirection.LEFT, sharpDrawable.getArrowDirection());
     }
 
     @Test
     public void setRelativePosition() {
         double relativePosition = 0.5;
         sharpDrawable.setRelativePosition((float) relativePosition);
-        assertTrue(abs(relativePosition-sharpDrawable.getmRelativePosition()) < 0.5);
+        assertTrue(abs(relativePosition-sharpDrawable.getRelativePosition()) < 0.5);
     }
 
     @Test
     public void setBorder() {
         float border = 10;
         sharpDrawable.setBorder(border);
-        assertTrue(abs(border-sharpDrawable.getmBorder()) < 0.5);
+        assertTrue(abs(border-sharpDrawable.getBorder()) < 0.5);
     }
 
     @Test
     public void setBorderColor() {
         sharpDrawable.setBorderColor(RgbPalette.BLACK);
-        assertSame(RgbPalette.BLACK, sharpDrawable.getmBorderColor());
+        assertSame(RgbPalette.BLACK, sharpDrawable.getBorderColor());
     }
 
     @Test
     public void setSharpSize() {
         float sharpSize = 10;
         sharpDrawable.setSharpSize(sharpSize);
-        assertTrue(abs(sharpSize-sharpDrawable.getmSharpSize()) < 0.5);
+        assertTrue(abs(sharpSize-sharpDrawable.getSharpSize()) < 0.5);
     }
 }
