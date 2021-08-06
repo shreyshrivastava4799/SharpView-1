@@ -14,18 +14,20 @@ We are very thankful to zengzhaoxing.
 
 * custom properties
 
-name | format 
------|------
-radius    | dimension    
-backgroundColor   | color     
-arrowDirection    | enum    
-relativePosition   | fraction
-sharpSize    | dimension    
-border    | dimension    
-borderColor    | color    
-startBgColor    | color    
-middleBgColor    | color    
-endBgColor    | color    
+name | format | instructions
+-----|------|------
+radius    | dimension | corner radius size
+backgroundColor   | color | Background color (be careful not to use HMPS native background-related attributes such as: background_element)
+arrowDirection    | enum | SharpView relative position (top, left, right, bottom)
+relativePosition   | fraction | Relative position of sharpview in fraction
+sharpSize    | dimension | Sharpview size, 0 means no sharp corners are displayed, the default is 0
+border    | dimension | Border size, default is 0
+borderColor    | color | Border color
+startBgColor    | color | Gradient initial color (required for gradient)
+middleBgColor    | color | Gradient middle color (optional when gradient)
+endBgColor    | color | Gradient end color (required for gradient)
+    
+Gradient colors are only valid when sharpSize is 0 (no sharp corners)
 
 ## Dependency
 1. For using SharpView module in sample app, include the source code and add the below dependencies in entry/build.gradle to generate hap/support.har.
