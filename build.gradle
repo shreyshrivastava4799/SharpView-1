@@ -39,6 +39,17 @@ allprojects {
         }
         jcenter()
     }
+    task checkstyle(type: Checkstyle) {
+        showViolations = true
+        configFile file("config/checkstyle.xml")
+
+        source 'entry/src/main/java'
+        source 'sharpview/src/main/java'
+        include '**/*.java'
+
+        // empty classpath
+        classpath = files()
+    }
 }
 
 checkstyle {
