@@ -13,12 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.zhaoxing.view.sharpview;
 
-import com.zhaoxing.view.sharpview.slice.MainAbilitySlice;
 import ohos.aafwk.ability.Ability;
 import ohos.aafwk.content.Intent;
+import com.zhaoxing.view.sharpview.slice.MainAbilitySlice;
 
+/**
+ * MainAbility.
+ */
 public class MainAbility extends Ability {
     @Override
     public void onStart(Intent intent) {

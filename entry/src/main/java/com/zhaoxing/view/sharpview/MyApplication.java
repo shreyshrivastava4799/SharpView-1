@@ -13,10 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.zhaoxing.view.sharpview;
 
 import ohos.aafwk.ability.AbilityPackage;
 
+/**
+ * MyApplication.
+ */
 public class MyApplication extends AbilityPackage {
     @Override
     public void onInitialize() {

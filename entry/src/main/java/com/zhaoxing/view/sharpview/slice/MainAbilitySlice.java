@@ -13,12 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.zhaoxing.view.sharpview.slice;
 
-import com.zhaoxing.view.sharpview.ResourceTable;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
+import com.zhaoxing.view.sharpview.ResourceTable;
 
+/**
+ * MainAbilitySlice.
+ */
 public class MainAbilitySlice extends AbilitySlice {
     @Override
     public void onStart(Intent intent) {

@@ -109,8 +109,8 @@ public class SharpViewRenderProxy {
         refreshView();
     }
 
-    public void setSharpDrawable(SharpDrawable SharpDrawable) {
-        mSharpDrawable = SharpDrawable;
+    public void setSharpDrawable(SharpDrawable sharpDrawable) {
+        mSharpDrawable = sharpDrawable;
     }
 
     /**

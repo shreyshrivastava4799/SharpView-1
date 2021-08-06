@@ -33,13 +33,13 @@ import static org.junit.Assert.*;
 
 public class SharpDrawableTest {
 
-    private Context context;
-    private AttrSet attrSet;
-    private Image image;
     private SharpDrawable sharpDrawable;
 
     @Before
     public void setUp() {
+        Context context;
+        AttrSet attrSet;
+        Image image;
         context = AbilityDelegatorRegistry.getAbilityDelegator().getAppContext();
         attrSet = new AttrSet() {
             @Override

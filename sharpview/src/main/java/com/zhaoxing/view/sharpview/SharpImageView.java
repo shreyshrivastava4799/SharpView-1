@@ -15,7 +15,6 @@ import ohos.app.Context;
 import ohos.media.image.PixelMap;
 import ohos.media.image.common.AlphaType;
 import ohos.media.image.common.PixelFormat;
-import ohos.media.image.common.ScaleMode;
 import ohos.media.image.common.Size;
 import java.lang.ref.SoftReference;
 
