@@ -15,6 +15,7 @@ import ohos.app.Context;
 import ohos.media.image.PixelMap;
 import ohos.media.image.common.AlphaType;
 import ohos.media.image.common.PixelFormat;
+import ohos.media.image.common.ScaleMode;
 import ohos.media.image.common.Size;
 import java.lang.ref.SoftReference;
 
@@ -50,7 +51,7 @@ public class SharpImageView extends Image implements SharpView, Component.DrawTa
         rect = new RectFloat();
         mSharpViewRenderProxy = new SharpViewRenderProxy(this, attrs);
         onSizeChanged();
-        addDrawTask(this::onDraw);
+        addDrawTask(this::onDraw, BETWEEN_BACKGROUND_AND_CONTENT);
     }
 
     @Override
@@ -65,6 +66,7 @@ public class SharpImageView extends Image implements SharpView, Component.DrawTa
         mPaint.setBlendMode(BlendMode.SRC_IN);
         mOutCanvas.drawPixelMapHolderRect(getPixelMapHolder(), rect, mPaint);
         mPaint.setBlendMode(null);
+        setPixelMap(null);
         canvas.drawPixelMapHolderRect(new PixelMapHolder(mSoftOutBitmap.get()), rect, rect, mPaint);
     }
 
@@ -72,7 +74,7 @@ public class SharpImageView extends Image implements SharpView, Component.DrawTa
         PixelMap.InitializationOptions initializationOptions = new PixelMap.InitializationOptions();
         initializationOptions.size = new Size(getWidth(), getHeight());
         initializationOptions.pixelFormat = PixelFormat.ARGB_8888;
-        initializationOptions.scaleMode = ohos.media.image.common.ScaleMode.CENTER_CROP;
+        initializationOptions.scaleMode = ohos.media.image.common.ScaleMode.FIT_TARGET_SIZE;
         PixelMap inBitmap = PixelMap.create(initializationOptions);
         PixelMap outBitmap = PixelMap.create(initializationOptions);
         inBitmap.setAlphaType(AlphaType.UNPREMUL);

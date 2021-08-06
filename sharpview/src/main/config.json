@@ -18,7 +18,7 @@
     "package": "com.zhaoxing.view.sharpview",
     "deviceType": [
       "phone",
-      "tv"
+      "tablet"
     ],
     "distro": {
       "deliveryWithInstall": true,

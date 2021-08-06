@@ -3,6 +3,7 @@ package com.zhaoxing.view.sharpview;
 import ohos.agp.colors.RgbColor;
 import ohos.agp.colors.RgbPalette;
 import ohos.agp.components.Component;
+import ohos.agp.components.Image;
 import ohos.agp.components.element.ShapeElement;
 import ohos.agp.render.Arc;
 import ohos.agp.render.Canvas;
@@ -182,6 +183,10 @@ class SharpDrawable extends ShapeElement {
             mSharpPath.lineTo(mPointFs[0].getPointX(), mPointFs[0].getPointY());
             mPaint.setColor(new Color(mBackgroundColor.asRgbaInt()));
             canvas.drawPath(mSharpPath, mPaint);
+
+            if (mComponent instanceof Image) {
+                return;
+            }
 
             mPaint.setColor(new Color(mBorderColor.asRgbaInt()));
             mPaint.setStyle(Paint.Style.STROKE_STYLE);
