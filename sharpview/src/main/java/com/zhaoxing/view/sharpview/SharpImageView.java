@@ -60,8 +60,8 @@ public class SharpImageView extends Image implements SharpView, Component.DrawTa
         }
         mPaint.setAntiAlias(true);
         mOutCanvas.drawColor(Color.TRANSPARENT.getValue(), PorterDuffMode.CLEAR);
-        mSharpViewRenderProxy.mSharpDrawable.setPaint(mPaint);
-        mSharpViewRenderProxy.mSharpDrawable.drawToCanvas(mOutCanvas);
+        mSharpViewRenderProxy.getSharpDrawable().setPaint(mPaint);
+        mSharpViewRenderProxy.getSharpDrawable().drawToCanvas(mOutCanvas);
         mPaint.setBlendMode(BlendMode.SRC_IN);
         mOutCanvas.drawPixelMapHolderRect(getPixelMapHolder(), rect, mPaint);
         mPaint.setBlendMode(null);

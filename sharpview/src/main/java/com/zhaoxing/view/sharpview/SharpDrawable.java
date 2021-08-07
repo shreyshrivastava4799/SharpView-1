@@ -193,32 +193,49 @@ class SharpDrawable extends ShapeElement {
             mPaint.setStrokeWidth(mBorder);
             switch (mArrowDirection) {
                 case LEFT:
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mRect.right - mCornerRadius, mRect.top, mPaint);
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mRect.right - mCornerRadius, mRect.bottom, mPaint);
-                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mRect.bottom - mCornerRadius, mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mRect.right - mCornerRadius,
+                            mRect.top, mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mRect.right - mCornerRadius,
+                            mRect.bottom, mPaint);
+                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mRect.bottom - mCornerRadius,
+                            mPaint);
                     canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mPointFs[1].getPointY(), mPaint);
-                    canvas.drawLine(mRect.left, mPointFs[2].getPointY(), mRect.left, mRect.bottom - mCornerRadius, mPaint);
+                    canvas.drawLine(mRect.left, mPointFs[2].getPointY(), mRect.left, mRect.bottom - mCornerRadius,
+                            mPaint);
                     break;
                 case TOP:
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mRect.right - mCornerRadius, mRect.bottom, mPaint);
-                    canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mRect.bottom - mCornerRadius, mPaint);
-                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mRect.bottom - mCornerRadius, mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mRect.right - mCornerRadius,
+                            mRect.bottom, mPaint);
+                    canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mRect.bottom - mCornerRadius,
+                            mPaint);
+                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mRect.bottom - mCornerRadius,
+                            mPaint);
                     canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mPointFs[1].getPointX(), mRect.top, mPaint);
                     canvas.drawLine(mPointFs[2].getPointX(), mRect.top, mRect.right - mCornerRadius, mRect.top, mPaint);
                     break;
                 case RIGHT:
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mRect.right - mCornerRadius, mRect.top, mPaint);
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mRect.right - mCornerRadius, mRect.bottom, mPaint);
-                    canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mRect.bottom - mCornerRadius, mPaint);
-                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mPointFs[1].getPointY(), mPaint);
-                    canvas.drawLine(mRect.right, mPointFs[2].getPointY(), mRect.right, mRect.bottom - mCornerRadius, mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mRect.right - mCornerRadius,
+                            mRect.top, mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mRect.right - mCornerRadius,
+                            mRect.bottom, mPaint);
+                    canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mRect.bottom - mCornerRadius,
+                            mPaint);
+                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mPointFs[1].getPointY(),
+                            mPaint);
+                    canvas.drawLine(mRect.right, mPointFs[2].getPointY(), mRect.right, mRect.bottom - mCornerRadius,
+                            mPaint);
                     break;
                 case BOTTOM:
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mRect.right - mCornerRadius, mRect.top, mPaint);
-                    canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mRect.bottom - mCornerRadius, mPaint);
-                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mRect.bottom - mCornerRadius, mPaint);
-                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mPointFs[1].getPointX(), mRect.bottom, mPaint);
-                    canvas.drawLine(mPointFs[2].getPointX(), mRect.bottom, mRect.right - mCornerRadius, mRect.bottom, mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.top, mRect.right - mCornerRadius,
+                            mRect.top, mPaint);
+                    canvas.drawLine(mRect.left, mRect.top + mCornerRadius, mRect.left, mRect.bottom - mCornerRadius,
+                            mPaint);
+                    canvas.drawLine(mRect.right, mRect.top + mCornerRadius, mRect.right, mRect.bottom - mCornerRadius,
+                            mPaint);
+                    canvas.drawLine(mRect.left + mCornerRadius, mRect.bottom, mPointFs[1].getPointX(), mRect.bottom,
+                            mPaint);
+                    canvas.drawLine(mPointFs[2].getPointX(), mRect.bottom, mRect.right - mCornerRadius, mRect.bottom,
+                            mPaint);
                     break;
                 default:
                     break;
@@ -237,8 +254,10 @@ class SharpDrawable extends ShapeElement {
                 canvas.drawArc(mOvalRect[3], new Arc(90, -90, false), mPaint);
             }
 
-            canvas.drawLine(mPointFs[0].getPointX(), mPointFs[0].getPointY(), mPointFs[1].getPointX(), mPointFs[1].getPointY(), mPaint);
-            canvas.drawLine(mPointFs[0].getPointX(), mPointFs[0].getPointY(), mPointFs[2].getPointX(), mPointFs[2].getPointY(), mPaint);
+            canvas.drawLine(mPointFs[0].getPointX(), mPointFs[0].getPointY(), mPointFs[1].getPointX(),
+                    mPointFs[1].getPointY(), mPaint);
+            canvas.drawLine(mPointFs[0].getPointX(), mPointFs[0].getPointY(), mPointFs[2].getPointX(),
+                    mPointFs[2].getPointY(), mPaint);
         }
     }
 

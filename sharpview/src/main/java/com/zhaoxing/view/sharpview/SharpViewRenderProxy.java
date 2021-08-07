@@ -44,7 +44,7 @@ public class SharpViewRenderProxy {
     private RgbColor[] mBgColors;
     private float[] mCornerRadii = new float[8];
     private SharpView.ArrowDirection mArrowDirection = SharpView.ArrowDirection.LEFT;
-    public SharpDrawable mSharpDrawable;
+    private SharpDrawable mSharpDrawable;
 
     SharpViewRenderProxy(Component component, AttrSet attrs) {
         mComponent = component;

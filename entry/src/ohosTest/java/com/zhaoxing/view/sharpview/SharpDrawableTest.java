@@ -37,8 +37,8 @@ public class SharpDrawableTest {
 
     @Before
     public void setUp() {
-        Context context;
         AttrSet attrSet;
+        Context context;
         Image image;
         context = AbilityDelegatorRegistry.getAbilityDelegator().getAppContext();
         attrSet = new AttrSet() {
@@ -53,14 +53,15 @@ public class SharpDrawableTest {
             }
 
             @Override
-            public Optional<Attr> getAttr(int i) {
+            public Optional<Attr> getAttr(String s) {
                 return Optional.empty();
             }
 
             @Override
-            public Optional<Attr> getAttr(String s) {
+            public Optional<Attr> getAttr(int i) {
                 return Optional.empty();
             }
+
         };
         image = new Image(context, attrSet);
         sharpDrawable = new SharpDrawable(ShapeElement.Orientation.LEFT_TO_RIGHT, image);
